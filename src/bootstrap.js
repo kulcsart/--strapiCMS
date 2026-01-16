@@ -5,7 +5,13 @@ const path = require('path');
 const mime = require('mime-types');
 const { categories, authors, articles, global, about } = require('../data/data.json');
 
+const SEED_ENABLED = process.env.SEED_ENABLED === 'true';
+
 async function seedExampleApp() {
+  if (!SEED_ENABLED) {
+    return;
+  }
+
   const shouldImportSeedData = await isFirstRun();
 
   if (shouldImportSeedData) {

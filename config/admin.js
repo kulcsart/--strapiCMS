@@ -1,6 +1,10 @@
 module.exports = ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
+    sessions: {
+      maxRefreshTokenLifespan: env.int('ADMIN_REFRESH_TOKEN_MAX_LIFESPAN', 2592000000),
+      maxSessionLifespan: env.int('ADMIN_SESSION_MAX_LIFESPAN', 7200000),
+    },
   },
   apiToken: {
     salt: env('API_TOKEN_SALT'),
