@@ -23,6 +23,12 @@
         "videos",
         "audios"
       ]
+    },
+    "gallery_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gallery-page.gallery-page",
+      "inversedBy": "gallery_items"
     }
   }
 }

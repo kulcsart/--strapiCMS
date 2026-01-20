@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buttons';
+  info: {
+    displayName: 'Button';
+  };
+  attributes: {
+    hash: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    target: Schema.Attribute.Enumeration<['_self', '_blank']>;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFeature extends Struct.ComponentSchema {
   collectionName: 'components_shared_features';
   info: {
@@ -71,15 +84,28 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTwoButtonCta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_two_button_ctas';
+  info: {
+    displayName: 'TwoButtonCTA';
+  };
+  attributes: {
+    firstButton: Schema.Attribute.Component<'shared.button', false>;
+    secondButton: Schema.Attribute.Component<'shared.button', false>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.button': SharedButton;
       'shared.feature': SharedFeature;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.two-button-cta': SharedTwoButtonCta;
     }
   }
 }

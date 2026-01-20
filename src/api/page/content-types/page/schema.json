@@ -14,11 +14,36 @@
     "title": {
       "type": "string"
     },
+    "tag": {
+      "type": "string"
+    },
     "slug": {
       "type": "string"
     },
     "content": {
       "type": "richtext"
+    },
+    "TwoButtonCTA": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.two-button-cta"
+      ]
+    },
+    "page_image_large": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "page_image_small": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     }
   }
 }
