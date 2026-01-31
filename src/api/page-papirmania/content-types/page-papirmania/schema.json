@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages_papirmania",
+  "info": {
+    "singularName": "page-papirmania",
+    "pluralName": "pages-papirmania",
+    "displayName": "Page Papírmania"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "TwoButtonCTA": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.two-button-cta"
+      ]
+    },
+    "page_image_large": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "page_image_small": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

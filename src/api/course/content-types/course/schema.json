@@ -22,6 +22,9 @@
     },
     "features": {
       "type": "json"
+    },
+    "registrationUrl": {
+      "type": "string"
     }
   }
 }
