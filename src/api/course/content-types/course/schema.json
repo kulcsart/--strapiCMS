@@ -25,6 +25,9 @@
     },
     "registrationUrl": {
       "type": "string"
+    },
+    "order": {
+      "type": "integer"
     }
   }
 }
